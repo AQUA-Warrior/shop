@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <h1>Online Store</h1>
+      <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">🌙</button>
+    </div>
+    <a href="/admin" id="admin-link">Admin Panel</a>
+  </header>
+  <div id="main-container" style="margin-top:0;padding-top:0;">
+    <main style="margin-top:0;padding-top:0;">
+      <div id="store-layout" style="margin-top:0;padding-top:0;">
+        <aside id="filter-sidebar">
+          <h3>Filters</h3>
+          <div class="filter-group">
+            <label>Category</label>
+            <select id="filter-category">
+              <option value="">All</option>
+
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Price Range</label>
+            <input type="range" id="filter-price" min="0" max="1000" step="1">
+            <span id="filter-price-value"></span>
+          </div>
+          <button id="clear-filters-btn" class="neutral-btn">Clear Filters</button>
+        </aside>
+        <section id="products-section">
+          <div id="filter-bar">
+            <input id="filter-input" placeholder="Search or filter items...">
+            <select id="sort-select">
+              <option value="newest">Newest</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="alpha">A–Z</option>
+              <option value="bestselling">Best-selling</option>
+            </select>
+          </div>
+          <div id="items" class="item-list grid"></div>
+          <div id="pagination-controls"></div>
+        </section>
+      </div>
+      <div id="cart" class="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <div class="cart-total-row">
+          <span>Total:</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button id="empty-cart-btn" style="margin-bottom:0.7em;">Empty Cart</button>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+      <button id="cart-fab" title="Show Cart">🛒<span id="cart-fab-count">0</span></button>
+      <div id="notif-area"></div>
+      <div id="quick-view-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close-modal" id="close-quick-view">&times;</span>
+          <div id="quick-view-content"></div>
+        </div>
+      </div>
+      <div id="skeleton-loader" class="skeleton-list" style="display:none;">
+      </div>
+    </main>
+  </div>
+  <script src="main.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
+  <script src="theme.js"></script>
+</body>
+</html>
