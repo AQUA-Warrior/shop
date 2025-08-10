@@ -286,11 +286,17 @@ body.dark .item p {
 .product-img {
   width: 100%;
   max-width: 220px;
-  max-height: 120px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-height: 220px;
   object-fit: cover;
+  object-position: center;
   border-radius: 7px;
   margin-bottom: 0.7em;
   background: #eee;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .label {
   position: absolute;
@@ -1103,4 +1109,102 @@ body.dark #filter-category {
   background: #23272a;
   color: #eee;
   border: 1px solid #444;
+}
+
+#quick-view-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 0.5em 0;
+}
+
+#quick-view-parent h2 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+body.dark #quick-view-parent h2 {
+  color: #90caf9;
+}
+
+#quick-view-parent .quick-view-description {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 0.5em;
+  white-space: pre-line;
+}
+
+body.dark #quick-view-parent .quick-view-description {
+  color: #bbb;
+}
+
+#quick-view-parent ul {
+  margin: 0.3em 0 0.7em 1.2em;
+  padding: 0;
+  font-size: 0.98em;
+  color: #555;
+}
+
+body.dark #quick-view-parent ul {
+  color: #bbb;
+}
+
+#quick-view-parent .quick-view-actions {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+#quick-view-parent .item-qty-input {
+  width: 2.5em;
+  padding: 0.2em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1em;
+}
+
+#quick-view-add-to-cart {
+  background: #43a047;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+#quick-view-add-to-cart:hover {
+  background: #388e3c;
+}
+
+.highlight {
+  background: #ffe066;
+  color: #222;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+body.dark .highlight {
+  background: #ffd54f;
+  color: #222;
+}
+
+#close-quick-view {
+  position: absolute;
+  top: 1em;
+  right: 1.2em;
+  font-size: 1.5em;
+  color: #888;
+  cursor: pointer;
+  font-weight: 700;
+  z-index: 10;
+}
+#close-quick-view:hover {
+  color: #e53935;
 }
